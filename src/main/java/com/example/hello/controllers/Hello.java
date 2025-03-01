@@ -34,4 +34,11 @@ public class Hello {
         return "Hello " + user.getFirstName() + " " + user.getLastName() + " Thanks for using my application";
     }
 
+    // UC5 - PutMethod: Handles PUT requests at "/put" with a User object in the request body.
+    // URL: Use PUT request at http://localhost:8080/put with JSON body: { "firstName": "Abhay", "lastName": "Goyal" }
+    @PutMapping("/put")
+    public String sayHelloPut(@RequestBody User user) {
+        return "Hello " + user.getFirstName() + " " + user.getLastName() + " Thanks for using my application";
+    }
+
 }
